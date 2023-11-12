@@ -20,6 +20,12 @@ int main()
 		}
 		sizeOfArr++;
 	} while (array[sizeOfArr] != -1 && sizeOfArr < MAX);
+	cout << "The array is:";
+	for (int i = 0; i < sizeOfArr; i++)
+	{
+		cout << array[i]<<" ";
+	}
+	cout << "\nThe average is:"<< CalcAverage(array, sizeOfArr);
 }
 double CalcAverage(double arr[], int &size)
 {
