@@ -30,8 +30,11 @@ int main()
 double CalcAverage(double arr[], int &size)
 {
 	double sum = 0;
-	double avg = sum / size;
-
-
+	double avg;
+	for (int j = 0; j < size; j++)
+	{
+		sum += arr[j];
+	}
+	avg = sum / size;
 	return avg;
 }
