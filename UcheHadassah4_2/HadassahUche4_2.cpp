@@ -1,7 +1,5 @@
-/*Write a function called CalcAverage that takes as parameters an array of doubles and 
-the array size as integer, and returns the average of the array (of type double). 
-Write a main program to test your function by reading the array from the user (-1 to 
-signal end of input). The program should output the array and the average.*/
+/*Name:Uche Hadassah
+This program computes the average of a user given array and outputs both the array and the average*/
 #include<iostream>
 using namespace std;
 const int MAX = 100;
@@ -14,18 +12,18 @@ int main()
 	do
 	{
 		cin >> array[sizeOfArr];
-		if (array[sizeOfArr] == -1)
+		if (array[sizeOfArr] == -1)//Breaks out if the sentinel is reached
 		{
 			break;
 		}
 		sizeOfArr++;
 	} while (array[sizeOfArr] != -1 && sizeOfArr < MAX);
 	cout << "The array is:";
-	for (int i = 0; i < sizeOfArr; i++)
+	for (int i = 0; i < sizeOfArr; i++)//Outputs the array
 	{
 		cout << array[i]<<" ";
 	}
-	cout << "\nThe average is:"<< CalcAverage(array, sizeOfArr);
+	cout << "\nThe average is:"<< CalcAverage(array, sizeOfArr);//Calls the function
 }
 double CalcAverage(double arr[], int &size)
 {
@@ -33,8 +31,8 @@ double CalcAverage(double arr[], int &size)
 	double avg;
 	for (int j = 0; j < size; j++)
 	{
-		sum += arr[j];
+		sum += arr[j];//adds the value in the array to sum
 	}
-	avg = sum / size;
+	avg = sum / size;//Computes the average
 	return avg;
 }
